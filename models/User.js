@@ -71,7 +71,7 @@ UserSchema.methods.toAuthJSON = function() {
 
 UserSchema.plugin(uniqueValidator, {message: 'is already taken.'});
 
-UserSchema.methods.toProfileJSONFor = function() {
+UserSchema.methods.toProfileJSONFor = function(user) {
   return {
     username: this.username,
     bio: this.bio,
